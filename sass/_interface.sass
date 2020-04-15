@@ -43,3 +43,34 @@
       height: 1px
       width: 80px
       background-color: $gray
+.line
+  display: inline-block
+  width: 20px
+  height: 1px
+  background-color: $light
+  margin-bottom: 1.37rem
+  margin-left: 0.7rem
+  margin-right: -0.5rem
+
+.city
+  display: flex
+  align-items: center
+  background: transparent
+  border: none
+  color: $light
+  +light
+  font-size: 0.857rem
+  letter-spacing: 1.05px
+  cursor: pointer
+  &:hover
+    color: $primary
+    text-decoration: underline
+  &:before
+    content: ''
+    display: inline-block
+    margin-right: 0.5rem
+    width: 11px
+    height: 14px
+    background: url(../img/header/pointMap.svg) no-repeat center
+  &:focus
+    outline: none
