@@ -1,21 +1,28 @@
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Light';
   font-display: swap;
-  src: url("../fonts/") format("woff"), url("../fonts/") format("woff");
+  src: url("../fonts/light/FiraSansLight.woff2") format("woff"), url("../fonts/light/FiraSansLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans Regular';
+  font-display: swap;
+  src: url("../fonts/FiraSans.woff2") format("woff"), url("../fonts//FiraSans.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Medium';
   font-display: swap;
-  src: url("../fonts/futura/") format("woff"), url("../fonts/futura/") format("woff");
+  src: url("../fonts/medium/FiraSansMedium.woff2") format("woff"), url("../fonts/medium/FiraSansMedium.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Bold';
   font-display: swap;
-  src: url("../fonts/") format("woff"), url("../fonts/") format("woff");
+  src: url("../fonts/bold/FiraSans-Bold.woff2") format("woff"), url("../fonts/bold/FiraSans-Bold.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
@@ -325,6 +332,55 @@ template {
 [hidden] {
   display: none; }
 
+.title {
+  font-family: 'Fira Sans Bold', sans-serif;
+  font-weight: 800;
+  font-size: 5.714rem;
+  line-height: 6.142rem;
+  text-transform: uppercase; }
+
+.subtitle-right {
+  display: block;
+  font-family: 'Fira Sans Light', sans-serif;
+  font-weight: 300;
+  font-weight: 200;
+  font-size: 1.571rem;
+  line-height: 2.285rem;
+  text-transform: uppercase;
+  letter-spacing: 0.49rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right; }
+  .subtitle-right:before {
+    content: '';
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-right: 1.7rem;
+    margin-top: 0;
+    height: 1px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.5); }
+
+.subtitle-left {
+  display: block;
+  font-family: 'Fira Sans Light', sans-serif;
+  font-weight: 300;
+  font-weight: 200;
+  font-size: 1.571rem;
+  line-height: 2.285rem;
+  text-transform: uppercase;
+  letter-spacing: 0.49rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: left; }
+  .subtitle-left:after {
+    content: '';
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-left: 1.7rem;
+    margin-top: 0;
+    height: 1px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.5); }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -332,7 +388,125 @@ html {
   font-size: 14px; }
 
 body {
-  font-size: 1rem; }
+  font-family: 'Fira Sans Regular', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #171919; }
 
 img {
   max-width: 100%; }
+
+.header {
+  position: relative;
+  width: 100%;
+  heigth: 100vh; }
+  .header__slider {
+    width: 100%;
+    height: 100vh; }
+  .header__slide {
+    width: 100%;
+    height: 100vh;
+    z-index: -2; }
+    .header__slide--1 {
+      width: 100%;
+      height: 100vh;
+      z-index: -2;
+      background: #171919 url(../img/header/bg3.jpg) no-repeat center/cover; }
+    .header__slide--2 {
+      background: #171919 url(../img/header/bg2.jpg) no-repeat center/cover; }
+    .header__slide--3 {
+      background: #171919 url(../img/header/bg.jpg) no-repeat center/cover; }
+    .header__slide--4 {
+      background: #171919 url(../img/header/bg4.jpg) no-repeat center/cover; }
+    .header__slide:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(23, 25, 25, 0.7);
+      z-index: -1; }
+  .header__title {
+    margin-top: 1rem;
+    margin-bottom: 3rem; }
+  .header__btn-group {
+    position: absolute;
+    top: 1rem;
+    right: 5.214rem;
+    display: flex;
+    z-index: 1; }
+  .header__btn-next {
+    cursor: pointer; }
+    .header__btn-next:hover {
+      opacity: 0.5; }
+  .header__btn-prev {
+    margin-right: 2rem;
+    cursor: pointer; }
+    .header__btn-prev:hover {
+      opacity: 0.5; }
+  .header__gallery-thumbs {
+    position: absolute;
+    bottom: 3.214rem;
+    max-width: 63.35%;
+    width: 100%;
+    right: 5.214rem;
+    z-index: 2; }
+  .header__gallery-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .header__thumbs-slide {
+    max-width: 14.285rem !important;
+    width: 100% !important;
+    padding-top: 0.2rem;
+    border-top: 4px solid #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
+    .header__thumbs-slide:hover {
+      border-color: #4AF6CD;
+      color: #4AF6CD; }
+    .header__thumbs-slide:active {
+      border-color: #4AF6CD; }
+    .header__thumbs-slide:last-child {
+      margin-right: 0 !important; }
+  .header__thumbs-content {
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__thumbs-number {
+    font-family: 'Fira Sans Bold', sans-serif;
+    font-weight: 800;
+    font-size: 1.714rem; }
+  .header__thumbs-text {
+    font-family: 'Fira Sans Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.142rem; }
+
+.slide__info {
+  position: absolute;
+  bottom: 8.215rem;
+  right: 5.214rem;
+  display: flex;
+  flex-direction: column; }
+  .slide__info-text {
+    font-family: 'Fira Sans Bold', sans-serif;
+    font-weight: 800;
+    font-size: 2.857rem;
+    line-height: 3.142rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; }
+  .slide__info-link {
+    display: flex;
+    justify-content: flex-end; }
+  .slide__info-icon {
+    cursor: pointer; }
+    .slide__info-icon:hover {
+      opacity: 0.5; }
+
+.swiper-slide-thumb-active {
+  border-color: #4AF6CD; }

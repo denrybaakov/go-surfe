@@ -1,29 +1,39 @@
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Light';
   font-display: swap;
   src:
-    url('../fonts/') format('woff'),
-    url('../fonts/') format('woff');
+    url('../fonts/light/FiraSansLight.woff2') format('woff'),
+    url('../fonts/light/FiraSansLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans Regular';
+  font-display: swap;
+  src:
+    url('../fonts/FiraSans.woff2') format('woff'),
+    url('../fonts//FiraSans.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Medium';
   font-display: swap;
   src:
-    url('../fonts/futura/') format('woff'),
-    url('../fonts/futura/') format('woff');
+    url('../fonts/medium/FiraSansMedium.woff2') format('woff'),
+    url('../fonts/medium/FiraSansMedium.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: '';
+  font-family: 'Fira Sans Bold';
   font-display: swap;
   src:
-    url('../fonts/') format('woff'),
-    url('../fonts/') format('woff');
+    url('../fonts/bold/FiraSans-Bold.woff2') format('woff'),
+    url('../fonts/bold/FiraSans-Bold.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }

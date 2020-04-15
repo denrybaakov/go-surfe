@@ -54,7 +54,7 @@ function minCss(done) {
   // fileCss.pipe(rename({ suffix: ".min" })).pipe(cleanCss()).pipe(dest("./css/min"));
   fileMinCss.pipe(dest("./dist/css/"));
   // fileMinCss.pipe(dest("./css/min"));
-  del(['./css/*.min.css']);
+  // del(['./css/*.min.css']);
 
   done();
 }

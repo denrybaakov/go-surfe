@@ -1,0 +1,45 @@
+.title
+  +bold
+  font-size: 5.714rem
+  line-height: 6.142rem
+  text-transform: uppercase
+
+.subtitle
+  &-right
+    display: block
+    +light
+    font-weight: 200
+    font-size: 1.571rem
+    line-height: 2.285rem
+    text-transform: uppercase
+    letter-spacing: 0.49rem
+    color: $gray
+    text-align: right
+    &:before
+      content: ''
+      display: inline-block
+      margin-bottom: 0.5rem
+      margin-right: 1.7rem
+      margin-top: 0
+      height: 1px
+      width: 80px
+      background-color: $gray
+  &-left
+    display: block
+    +light
+    font-weight: 200
+    font-size: 1.571rem
+    line-height: 2.285rem
+    text-transform: uppercase
+    letter-spacing: 0.49rem
+    color: $gray
+    text-align: left
+    &:after
+      content: ''
+      display: inline-block
+      margin-bottom: 0.5rem
+      margin-left: 1.7rem
+      margin-top: 0
+      height: 1px
+      width: 80px
+      background-color: $gray
