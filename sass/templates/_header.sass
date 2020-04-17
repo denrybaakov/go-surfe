@@ -4,12 +4,16 @@
   heigth: 100vh
   &__slider
     width: 100%
-    height: 100vh
+    height: 100%
+  &__map
+    position: absolute
+    top: -57px
+    right: -65px
+    z-index: 1
   &__slide
     width: 100%
     height: 100vh
     z-index: -2
-    // background: $dark url(../img/header/bg.jpg) no-repeat center / cover
     &--1
       width: 100%
       height: 100vh
@@ -29,7 +33,7 @@
       left: 0
       width: 100%
       height: 100%
-      background-color: rgba($dark, 0.7)
+      background-color: rgba($dark, 0.75)
       z-index: -1
   &__title
     margin-top: 1rem
@@ -37,7 +41,7 @@
   &__btn
     &-group
       position: absolute
-      top: 1rem
+      top: 3.86rem
       right: 5.214rem
       display: flex
       z-index: 1
@@ -53,7 +57,7 @@
   &__gallery-thumbs
     position: absolute
     bottom: 3.214rem
-    max-width: 63.35%
+    max-width: 64.35%
     width: 100%
     right: 5.214rem
     z-index: 2
@@ -98,6 +102,11 @@
     position: absolute
     left: 0
     top: 0
+  &__menu
+    display: flex
+    flex: 1
+    align-items: center
+    margin-top: 5rem//----------?????????
 
 .slide
   &__info
@@ -125,12 +134,14 @@
   border-color: $primary
 
 .aside
+  // position: relative
   display: flex
   flex-direction: column
   align-items: center
   justify-content: space-between
-  max-width: 168px
+  max-width: 140px
   width: 100%
+  max-height: 100%
   height: 100%
   background-color: transparent
   border-right: 1px solid rgba(#979797, 0.4)
@@ -140,19 +151,19 @@
     display: flex
 
     width: 100%
-    height: 12.9rem
+    height: 10.9rem
     background-color: $primary
     transition: 0.5s ease-in-out
     &:hover
       background-color: transparent
     &-text
       position: absolute
-      bottom: 6px
+      bottom: 50px
       left: 50%
       display: inline-block
       width: 20rem
       +bold
-      font-size: 4.285rem
+      font-size: 3.285rem
       text-transform: uppercase
       margin-left: -10.15rem
       transform: rotate(-90deg)
@@ -163,19 +174,34 @@
     &-day
       display: block
       +bold
-      font-size: 5.142rem
+      font-size: 4.5rem
+      text-align: center
     &-mounth
+      display: inline-block
       +light
       font-weight: 100
       font-size: 1.142rem
       letter-spacing: 1.4px
+      text-align: center
+      margin-left: 0.4rem
+      margin-bottom: 1rem
     &-year
+      display: inline-block
       +light
       font-weight: 100
       font-size: 1.142rem
       letter-spacing: 1.4px
+      margin-bottom: 1rem
   &__city
-    margin-left: -0.8rem
+    margin-left: -0.5rem
+    text-align: center
+  &__arrows
+    position: absolute
+    bottom: 26px
+    right: -73px
+    cursor: pointer
+    &:hover
+      opacity: 0.5
 
 .menu
   &__list
@@ -186,38 +212,277 @@
       width: 53px
       height: 46px
       transition: 0.3s ease-in-out
-
       &--1
-        background: url(../img/header/surf.svg) no-repeat center
+        background: url(../img/header/surf.svg) no-repeat center / 90%
         margin-bottom: 0.4rem
         &:hover
-          background: url(../img/header/surf2.svg) no-repeat center
+          background: url(../img/header/surf2.svg) no-repeat center / 90%
+          color: $primary
       &--2
-        background: url(../img/header/travel.svg) no-repeat center
+        background: url(../img/header/travel.svg) no-repeat center / 80%
         margin-bottom: 0.3rem
         &:hover
-          background: url(../img/header/travel2.svg) no-repeat center
+          background: url(../img/header/travel2.svg) no-repeat center / 80%
       &--3
-        background: url(../img/header/sleep.svg) no-repeat center
+        background: url(../img/header/sleep.svg) no-repeat center / 70%
         &:hover
-          background: url(../img/header/sleep2.svg) no-repeat center
+          background: url(../img/header/sleep2.svg) no-repeat center / 70%
       &--4
-        background: url(../img/header/board.svg) no-repeat center
+        background: url(../img/header/board.svg) no-repeat center / 45%
         margin-bottom: 0.4rem
         &:hover
-          background: url(../img/header/board2.svg) no-repeat center
+          background: url(../img/header/board2.svg) no-repeat center / 45%
       &--5
-        background: url(../img/header/search.svg) no-repeat center
+        background: url(../img/header/search.svg) no-repeat center / 40%
         margin-bottom: 0.4rem
         &:hover
-          background: url(../img/header/search2.svg) no-repeat center
+          background: url(../img/header/search2.svg) no-repeat center / 45%
     &-item
       display: flex
       flex-direction: column
       align-items: center
       font-size: 0.857rem
       letter-spacing: 3px
-      margin-bottom: 2.5rem
+      margin-bottom: 2rem
+      &--last
+        margin-bottom: 0
       &:hover
         color: $primary
         text-decoration: underline
+
+.svg-map
+  width: 71.428rem
+  height: 30.428rem
+  &__path
+    &--1
+      cursor: pointer
+      stroke-dashoffset: 733
+      stroke-dasharray: 739
+      animation: animPath 5s infinite 6s
+    &--2
+      cursor: pointer
+      stroke-dashoffset: 733
+      stroke-dasharray: 739
+      animation: animPath 8s infinite 8s
+    &:hover
+      stroke: rgba($light, 0.5)
+.mobile
+  display: none
+
+//======================= высота ================= 
+
+@media screen and ( max-height: 800px )
+  .header
+    &__title
+      margin-bottom: 1rem
+    &__map
+      top: -36px
+      right: -165px
+  .aside
+    &__logo
+      height: 8rem
+      &-text
+        font-size: 2.2rem
+        bottom: 70px
+  .line
+    margin-bottom: 0.77rem
+    width: 15px
+    margin-right: 0rem
+    margin-left: 0.5rem
+  .menu
+    &__list
+      &-item
+        margin-bottom: 1rem
+        &--last
+          margin-bottom: 0
+      &-icon
+        &--1
+          background: url(../img/header/surf.svg) no-repeat center/85%
+          margin-bottom: 0
+        &--2
+          background-size: 70%
+          margin-bottom: -0.3rem
+        &--3
+          background-size: 65%
+          margin-bottom: -0.4rem
+        &--4
+          background-size: 35%
+          margin-bottom: -0.3rem
+        &--5
+          background-size: 40%
+          margin-bottom: -0.2rem
+  .svg-map
+    height: 23rem
+    width: 70rem
+    transform: rotate(0deg)
+
+@media screen and ( max-height: 670px )
+  .header
+    &__menu
+      margin-top: 1rem
+    &__btn-group
+      display: none
+    &__title
+      margin-bottom: 4rem
+  .slide
+    &__info-text
+      margin-bottom: 4rem
+  .aside
+    &__logo
+      padding: 3rem 0
+      max-height: 5rem
+      height: 5rem
+      &-text
+        position: static
+        line-height: 0rem
+        left: 0
+        width: 100%
+        color: $dark
+        text-align: center
+        font-size: 2rem
+        margin-left: 0
+        transform: rotate(0)
+  .line
+    margin-bottom: 0.77rem
+    width: 10px
+    background-color: $dark
+    margin-right: -0.3rem
+    margin-left: 0.2rem
+  .svg-map
+    display: none
+  .menu
+    &__list
+      &-icon--1, &-icon--2, &-icon--3, &-icon--4
+        display: none
+      &-item
+        margin-bottom: 1.5rem
+        font-size: 1.1rem
+//======================= end - высота =================
+
+@media screen and ( max-width: 1300px )
+  .header
+    &__thumbs-slide
+      max-width: none !important
+      width: 23% !important
+
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
+  .header
+    &__go-surf
+      background-size: 100%
+
+@media screen and ( max-width: 992px )
+  .header
+    &__title
+      margin-bottom: 1rem
+    &__gallery-wrapper
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-end
+    &__thumbs-slide
+      margin-bottom: 2.1rem
+      width: 58% !important
+      &:last-child
+        margin-right: 10px !important
+    &__gallery-thumbs
+      bottom: 0
+  .slide
+    &__info
+      bottom: 20rem
+      &-link
+        display: none
+      &-text
+        // display: none
+
+@media screen and ( max-width: 768px )
+  .aside
+    &__logo
+      padding: 3rem 0
+      max-height: 5rem
+      height: 5rem
+      &-text
+        position: static
+        line-height: 0rem
+        left: 0
+        width: 100%
+        color: $dark
+        text-align: center
+        font-size: 2rem
+        margin-left: 0
+        transform: rotate(0)
+  .line
+    margin-bottom: 0.77rem
+    width: 10px
+    background-color: $dark
+    margin-right: -0.3rem
+    margin-left: 0.2rem
+  .header
+    &__aside
+      display: none
+
+      //=================== mob =========
+  .mobile
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    max-width: 140px
+    width: 100%
+    max-height: 100%
+    height: 100%
+    background-color: transparent
+    border-right: 1px solid rgba(#979797, 0.4)
+    z-index: 2
+    &__logo
+      position: relative
+      display: flex
+
+      width: 100%
+      height: 10.9rem
+      background-color: $primary
+      transition: 0.5s ease-in-out
+      &:hover
+        background-color: transparent
+      &-text
+        position: absolute
+        bottom: 50px
+        left: 50%
+        display: inline-block
+        width: 20rem
+        +bold
+        font-size: 3.285rem
+        text-transform: uppercase
+        margin-left: -10.15rem
+        transform: rotate(-90deg)
+      &:hover
+        color: $primary
+    &__date
+      margin-bottom: 2.142rem
+      &-day
+        display: block
+        +bold
+        font-size: 4.5rem
+        text-align: center
+    &-mounth
+      display: inline-block
+      +light
+      font-weight: 100
+      font-size: 1.142rem
+      letter-spacing: 1.4px
+      text-align: center
+      margin-left: 0.4rem
+      margin-bottom: 1rem
+      &-year
+        display: inline-block
+        +light
+        font-weight: 100
+        font-size: 1.142rem
+        letter-spacing: 1.4px
+        margin-bottom: 1rem
+    &__city
+      margin-left: -0.5rem
+      text-align: center
