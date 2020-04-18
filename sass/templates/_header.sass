@@ -315,6 +315,9 @@
     height: 23rem
     width: 70rem
     transform: rotate(0deg)
+  .slide
+    &__info
+      bottom: 20rem !important
 
 @media screen and ( max-height: 670px )
   .header
@@ -325,6 +328,8 @@
     &__title
       margin-bottom: 4rem
   .slide
+    &__info
+      bottom: 17rem !important
     &__info-text
       margin-bottom: 4rem
   .aside
@@ -347,7 +352,8 @@
     width: 10px
     background-color: $dark
     margin-right: -0.3rem
-    margin-left: 0.2rem
+    margin-left: 0.7rem
+    margin-bottom: 0.7rem !important
   .svg-map
     display: none
   .menu
@@ -357,6 +363,32 @@
       &-item
         margin-bottom: 1.5rem
         font-size: 1.1rem
+  .mobile
+    height: 14rem !important
+  .aside
+    &__logo-text
+      bottom: 8px !important
+      font-size: 2.285rem !important
+      margin-left: -7.7rem !important
+@media screen and ( max-height: 569px )
+  .header
+    &__thumbs-slide
+      margin-bottom: 1rem !important
+    &__go-surf
+      background-position-x: 0px
+  .menu
+    &__item
+      padding: 25px 24px
+  .aside
+    &__logo-text
+      display: none !important
+  .mobile
+    height: 7rem !important
+  .slide
+    &__info
+      width: 86% !important
+      bottom: 14rem !important
+
 //======================= end - высота =================
 
 @media screen and ( max-width: 1300px )
@@ -423,66 +455,89 @@
 
       //=================== mob =========
   .mobile
+    display: block
     position: fixed
     top: 0
     left: 0
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-    max-width: 140px
-    width: 100%
-    max-height: 100%
-    height: 100%
-    background-color: transparent
-    border-right: 1px solid rgba(#979797, 0.4)
-    z-index: 2
-    &__logo
-      position: relative
-      display: flex
+    height: 18rem
+    width: 7rem
+    background-color: $primary
+    z-index: 99
+  .aside__logo-text
+    position: absolute
+    bottom: 15px
+    left: 50%
+    display: inline-block
+    width: 16rem
+    +bold
+    color: $light
+    font-size: 3.285rem
+    text-transform: uppercase
+    margin-left: -7.42rem
+    transform: rotate(-90deg)
+    z-index: -99
+  .line
+    background-color: $light
+    width: 15px
+    height: 2px
+    margin-left: 0.5rem
+    margin-bottom: 1rem
+    z-index: -99 !important
+  // .menu
+  //   &__logo-text
+  //     display: block
+  //     position: absolute
+  //     top: 0
+  //     right: 0
+  //     z-index: 9999999
+  //     +bold
+  //     font-size: 3rem
+  //     color: $dark
+  //     transform: rotate(-90deg)
 
+@media screen and ( max-width: 575px )
+  .header
+    &__btn-group
+      top: 5rem
+      right: 5%
+    &__title
+      font-size: 4rem
+    &__gallery-wrapper
+      justify-content: flex-start
+      align-items: flex-start
+      padding-left: 3rem
+    &__gallery-thumbs
+      left: 0
+      max-width: none
       width: 100%
-      height: 10.9rem
-      background-color: $primary
-      transition: 0.5s ease-in-out
-      &:hover
-        background-color: transparent
+    &__thumbs-slide
+      min-width: 20rem
+
+  .slide
+    &__info
+      right: 5%
+      bottom: 18rem
+      &-subtitle
+        font-size: 1.2rem
       &-text
-        position: absolute
-        bottom: 50px
-        left: 50%
-        display: inline-block
-        width: 20rem
-        +bold
-        font-size: 3.285rem
-        text-transform: uppercase
-        margin-left: -10.15rem
-        transform: rotate(-90deg)
-      &:hover
-        color: $primary
-    &__date
-      margin-bottom: 2.142rem
-      &-day
-        display: block
-        +bold
-        font-size: 4.5rem
-        text-align: center
-    &-mounth
-      display: inline-block
-      +light
-      font-weight: 100
-      font-size: 1.142rem
-      letter-spacing: 1.4px
-      text-align: center
-      margin-left: 0.4rem
-      margin-bottom: 1rem
-      &-year
-        display: inline-block
-        +light
-        font-weight: 100
-        font-size: 1.142rem
-        letter-spacing: 1.4px
-        margin-bottom: 1rem
-    &__city
-      margin-left: -0.5rem
-      text-align: center
+        font-size: 1.857rem
+
+@media screen and ( max-width: 450px )
+  .header
+    &__btn-group
+      display: none
+    &__map
+      top: -78px
+      right: -16%
+    &__go-surf
+      background-size: 60%
+    &__title
+      font-size: 3.5rem
+      text-align: right
+  .svg-map
+    width: 40.428rem
+    height: 30.428rem
+  .slide
+    &__info
+      width: 85%
+      bottom: 24rem

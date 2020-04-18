@@ -316,35 +316,36 @@
 
   <main>
     <div class="mobile">
-      <nav class="menu-mobile mobile__menu">
-        <ul class="menu-mobile__list">
-          <li><a href="#" class="menu-mobile__list-item">
-              <span class="menu-mobile__list-icon menu-mobile__list-icon--1"></span>
-              Surf
-            </a></li>
-          <li><a href="#" class="menu-mobile__list-item">
-              <span class="menu-mobile__list-icon menu-mobile__list-icon--2"></span>
-              Travel
-            </a></li>
-          <li><a href="#" class="menu-mobile__list-item">
-              <span class="menu-mobile__list-icon menu__list-icon--3"></span>
-              Sleep
-            </a></li>
-          <li><a href="#" class="menu-mobile__list-item">
-              <span class="menu__list-icon menu__list-icon--4"></span>
-              Shop
-            </a></li>
-          <li><a href="#" class="menu-mobile__list-item menu-mobile__list-item--last">
-              <span class="menu-mobile__list-icon menu-mobile__list-icon--5"></span>
-            </a></li>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+
+        </label>
+        <a href="index.html" class="aside__logo-text ">
+          go<span class="line"></span> surf
+        </a>
+
+        <ul class="menu__box">
+          <!-- <div class="menu__logo">
+            <a href="index.html" class=" menu__logo-text">
+              go<span class="line"></span> surf
+            </a>
+          </div> -->
+          <li><a class="menu__item" href="#">Surf</a></li>
+          <li><a class="menu__item" href="#">Travel</a></li>
+          <li><a class="menu__item" href="#">Sleep</a></li>
+          <li><a class="menu__item menu__item--last" href="#">Shop</a></li>
+          <!-- <li><a class="menu__item" href="#"></a></li> -->
+          <div class="aside__date">
+            <span class="aside__date-day">18</span>
+            <span class="aside__date-mounth">04 |</span>
+            <span class="aside__date-year">2020</span>
+            <button class="city aside__city ">California</button>
+          </div>
         </ul>
-      </nav>
-      <div class="aside__date">
-        <span class="aside__date-day">18</span>
-        <span class="aside__date-mounth">04 |</span>
-        <span class="aside__date-year">2020</span>
-        <button class="city aside__city ">California</button>
       </div>
+
     </div>
   </main>
 
