@@ -1,0 +1,136 @@
+.surf 
+  background: url(../img/surf/surf.svg) no-repeat left 200px,
+  url(../img/surf/poi.svg) no-repeat right 200px
+  padding-top: 11.214rem
+  padding-bottom: 3rem
+  &__title 
+    margin: 0.5rem 0 0 17%
+  &__section-subtitle 
+    margin-top: 4.3rem
+
+  &-slide 
+    position: relative
+    &__airlie
+      position: relative
+    &::after
+      content: ''
+      position: absolute
+      display: inline-block
+      top: 0
+      left: 0
+      width: 100% 
+      height: 100% 
+      background-color: rgba($dark, 0.8)
+      z-index: 999
+    &__title 
+      position: absolute 
+      top: 3% 
+      left: 12%
+      max-width: 9.928rem 
+      +bold 
+      text-transform: uppercase
+      font-size: 2.857rem 
+      line-height: 34px
+      z-index: 9999
+    &__country 
+      position: absolute 
+      top: 69%
+      left: -22%
+      display: block
+      +light 
+      text-transform: uppercase
+      font-size: 1.285rem 
+      letter-spacing: 8px;
+      color: $light 
+      transform: rotate(-90deg)
+      z-index: 99999
+    &__malibu
+      position: relative 
+    &:hover 
+      .surf-slide__view 
+        display: block 
+        z-index: 99999999
+      &:after 
+        background-color: rgba($dark, 0.2)
+    &__view 
+      display: none 
+      position: absolute 
+      bottom: 5px 
+      left: 50%
+      margin-left: -9rem
+      z-index: 4
+      &-text 
+        display: inline-block
+        +bold 
+        color: $light
+        font-size: 2.8rem
+        line-height: 36px
+        text-transform: uppercase
+        margin-bottom: 1rem
+        margin-top: 1rem
+        margin-right: 1rem
+    &__button 
+      margin-top: 10rem
+  &__swiper-container 
+    padding-top: 10rem
+    padding-bottom: 10rem
+
+
+.surf-slide 
+  width: 28.5rem !important 
+  &__airlie 
+    margin-top: -2.3rem
+    margin-left: -3.5rem
+    position: relative !important
+    z-index: 999
+  &__country
+    &--airlie 
+      position: absolute !important 
+      top: 65% !important
+      left: -35% !important 
+  &__cloud 
+    margin-top: 4rem
+    margin-left: -3.5rem
+    position: relative !important 
+    z-index: 1000
+  &__country
+    &--cloud
+      position: absolute 
+      top: 65%
+      left: -30% 
+  &__vieux
+    margin-top: -2.25rem
+    margin-left: -3.5rem
+    position: relative !important 
+    z-index: 1001
+  &__country 
+    &--vieux 
+      position: absolute 
+      top: 68% 
+      left: -25%
+  &__5 
+    margin-left: -3rem
+    z-index: 1002
+  &__6 
+    margin-top: -2.3rem
+    margin-left: -3.5rem
+    z-index: 1003
+  &__country
+    &--6 
+      position: absolute 
+      top: 65%
+      left: -18%
+  &__7 
+    margin-top: 4rem
+    margin-left: -3.5rem
+    z-index: 1004
+  &__country 
+    &--7 
+      position: absolute 
+      top: 62%
+      left: -25%
+  &__8 
+    margin-top: 1rem 
+    margin-left: -3rem
+    z-index: 1005
+    

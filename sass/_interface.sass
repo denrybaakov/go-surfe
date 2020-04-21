@@ -45,11 +45,6 @@
   text-align: center
   flex: 1
   background-color: $primary
-  // -webkit-backdrop-filter: blur(3px)
-  // -moz-backdrop-filter: blur(3px)
-  // -ms-backdrop-filter: blur(3px)
-  // backdrop-filter: blur(3px)
-  // box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
   z-index: 8
 .menu__box .aside__date
   position: absolute
@@ -103,6 +98,30 @@
   line-height: 6.142rem
   text-transform: uppercase
 
+.section-title 
+  display: inline-block
+  position: relative 
+  +bold
+  font-size: 5.714rem
+  line-height: 6.142rem
+  text-transform: uppercase
+  &:after 
+    content: ''
+    position: absolute
+    top: -3px
+    right: 0
+    display: inline-block
+    width: 80px
+    height: 1px
+    background-color: $primary
+    transition: width 1.3s ease-in-out
+  &:hover 
+    &:after 
+      width: 100%
+
+.section-subtitle 
+  padding-right: 5.714rem
+
 .subtitle
   &-right
     display: block
@@ -142,6 +161,16 @@
       height: 1px
       width: 80px
       background-color: $gray
+  &-text 
+    margin-top: 0.871rem
+    display: block 
+    text-align: right
+    +bold 
+    font-size: 2.857rem 
+    text-transform: uppercase
+    span 
+      +light
+
 .line
   display: inline-block
   width: 20px
@@ -175,6 +204,40 @@
     width: 11px
     height: 14px
     background: url(../img/header/pointMap.svg) no-repeat center
-
   &:focus
     outline: none
+
+.button
+  position: relative 
+  display: inline-block 
+  +bold 
+  font-size: 2.571rem 
+  line-height: 37px
+  text-transform: uppercase
+  background-color: $primary
+  padding: 1.214rem 1.071rem 1.214rem 1.214rem
+  cursor: pointer
+  transition: background-color 0.8s ease-in-out
+  &:hover 
+    background-color: transparent 
+    color: $primary
+    &:after 
+      background: url(../img/surf/btnArrow2.svg) no-repeat center 
+
+  &::before
+    content: ''
+    display: inline-block
+    position: absolute 
+    top: 50% 
+    left: -10px
+    width: 20px 
+    height: 1px 
+    background-color: $light
+  &:after 
+    content: ''
+    display: inline-block
+    margin-bottom: 0.1rem
+    margin-left: 1rem
+    width: 24px 
+    height: 20px
+    background: url(../img/surf/btnArrow.svg) no-repeat center 

@@ -25,7 +25,6 @@ $(document).ready(function () {
     //   delay: 5000,
     //   disableOnInteraction: false,
     // },
-
     navigation: {
       nextEl: '.header__btn-next',
       prevEl: '.header__btn-prev',
@@ -37,7 +36,22 @@ $(document).ready(function () {
 
 
 
-
+  //--surf-slider 
+  var swiperSurf = new Swiper('.surf__swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: '.surf__btn-next',
+      prevEl: '.surf__btn-prev',
+    },
+  });
 
 
 
