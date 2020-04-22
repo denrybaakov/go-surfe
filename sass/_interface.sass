@@ -214,30 +214,41 @@
   font-size: 2.571rem 
   line-height: 37px
   text-transform: uppercase
-  background-color: $primary
-  padding: 1.214rem 1.071rem 1.214rem 1.214rem
+  // background-color: $primary
+  
   cursor: pointer
   transition: background-color 0.8s ease-in-out
   &:hover 
-    background-color: transparent 
+    & .button__block
+      background-color: transparent 
+      &:before 
+        background-color: $primary 
+      &:after 
+        background: url(../img/surf/btnArrow2.svg) no-repeat center
     color: $primary
+       
+  
+  &__block 
+    display: inline-block 
+    padding: 1.214rem 1.071rem 1.214rem 1.214rem
+    background-color: $primary
+    margin-left: 0.8rem
+    transition: background-color 0.8s ease-in-out
     &:after 
-      background: url(../img/surf/btnArrow2.svg) no-repeat center 
-
-  &::before
-    content: ''
-    display: inline-block
-    position: absolute 
-    top: 50% 
-    left: -10px
-    width: 20px 
-    height: 1px 
-    background-color: $light
-  &:after 
-    content: ''
-    display: inline-block
-    margin-bottom: 0.1rem
-    margin-left: 1rem
-    width: 24px 
-    height: 20px
-    background: url(../img/surf/btnArrow.svg) no-repeat center 
+      content: ''
+      display: inline-block
+      margin-bottom: 0.1rem
+      margin-left: 1rem
+      width: 24px 
+      height: 20px
+      background: url(../img/surf/btnArrow.svg) no-repeat center 
+    &::before
+      content: ''
+      display: inline-block
+      position: absolute 
+      margin-left: 0.5rem
+      top: 50% 
+      left: 33.5%
+      width: 20px 
+      height: 1px 
+      background-color: $light

@@ -39,10 +39,11 @@ $(document).ready(function () {
   //--surf-slider 
   var swiperSurf = new Swiper('.surf__swiper-container', {
     slidesPerView: 4,
-    spaceBetween: 0,
+    spaceBetween: 10,
     slidesPerGroup: 1,
-    loop: false,
-    loopFillGroupWithBlank: true,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    slideToClickedSlide: true,
     // pagination: {
     //   el: '.swiper-pagination',
     //   clickable: true,
@@ -52,6 +53,20 @@ $(document).ready(function () {
       prevEl: '.surf__btn-prev',
     },
   });
+
+  $('.slider-dots').on('click', function () {
+    var index = $(this).data('index');
+    swiperSurf.slideTo(index);
+    // console.log(swiperSurf.slideTo(index));
+    // swiperSurf[1].slideTo(index);
+  });
+
+  var dots = $('.slider-dots');
+  content = $('.slider-dots__content');
+
+  dots.on('click', function () {
+    content.toggleClass('disable');
+  })
 
 
 

@@ -10,10 +10,7 @@
 
   &-slide 
     position: relative
-    &__airlie
-      position: relative
-    &::after
-      content: ''
+    &__inner 
       position: absolute
       display: inline-block
       top: 0
@@ -22,6 +19,11 @@
       height: 100% 
       background-color: rgba($dark, 0.8)
       z-index: 999
+      transition: all 1s
+      &:hover 
+        background-color: rgba($dark, 0.3)
+    &__airlie
+      position: relative
     &__title 
       position: absolute 
       top: 3% 
@@ -77,7 +79,7 @@
 
 
 .surf-slide 
-  width: 28.5rem !important 
+  width: 29.5rem !important 
   &__airlie 
     margin-top: -2.3rem
     margin-left: -3.5rem
@@ -134,3 +136,135 @@
     margin-left: -3rem
     z-index: 1005
     
+.swiper-slide-active 
+  .surf-slide
+    &__view 
+      display: block 
+      z-index: 99999999
+    &__inner
+      background-color: rgba($dark, 0.2)
+  .slider-dots__content 
+    display: block 
+
+.slider-dots
+  &__content
+    // display: none //?????????????????????????????
+    max-width: 20.21rem
+    width: 100%
+    min-width: 19rem
+    padding: 2rem 2.285rem 
+    background-color: rgba($dark, 0.7)
+    border-radius: 6px 
+    border: 1px solid red
+    &-title 
+      margin: 0
+      position: relative 
+      +bold 
+      font-size: 1.285rem 
+      text-transform: uppercase
+      &:before 
+        content: ''
+        position: absolute 
+        bottom: -8px
+        left: 0
+        display: inline-block 
+        width: 80px 
+        height: 1px 
+        background-color: $primary
+        transition: width 1.2s 
+      &:hover 
+        &:before 
+          width: 100%
+    &-head 
+      display: flex 
+      justify-content: space-between
+      align-items: center 
+      a 
+        display: flex 
+        align-items: center 
+      img 
+        width: 17px 
+        height: 15px
+        cursor: pointer
+        &:hover 
+          opacity: 0.6
+    &-country 
+      display: inline-block
+      margin-top: 1rem
+      margin-bottom: 2.142rem
+      font-size: 1.142rem
+      line-height: 19px 
+    &-row 
+      display: flex 
+      justify-content: space-between
+      align-items: center 
+    &-item 
+      text-align: center 
+    &-number 
+      +bold 
+      font-size: 1.142rem 
+    &-desc 
+      +light 
+      font-size: 0.714rem
+      text-transform: uppercase
+      color: rgba($light, 0.7)
+
+
+.slider-map 
+  position: relative 
+  max-width: 1200px 
+  min-height: 635px 
+
+  display: flex 
+  flex-wrap: wrap
+  background: url(../img/surf/map.png) no-repeat center / 100%
+  margin: 0 auto
+
+.slider-dots
+  &__circle 
+    // display: inline-block
+    width: 24px 
+    height: 24px 
+    border-radius: 50%
+    background-color: $primary
+    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+    cursor: pointer
+    transition: all 0.5s
+    &:hover 
+      box-shadow: none
+    &--1
+      
+      position: absolute 
+      bottom: 24%
+      right: 9%
+    &--2
+      position: absolute 
+      top: 43%
+      left: 10.3%
+    &--3
+      position: absolute 
+      top: 46%;
+      right: 13%;
+    &--4
+      position: absolute 
+      top: 34%;
+      right: 54%;
+    &--5
+      position: absolute 
+      top: 50%;
+      left: 28%;
+    &--6
+      position: absolute 
+      top: 78%;
+      left: 35%;
+    &--7
+      position: absolute 
+      bottom: 6%;
+      left: 30%;
+    &--8
+      position: absolute 
+      bottom: 12%;
+      right: 43%;
+
+.disable 
+  display: none 
