@@ -61,11 +61,32 @@ $(document).ready(function () {
     // swiperSurf[1].slideTo(index);
   });
 
-  var dots = $('.slider-dots');
-  content = $('.slider-dots__content');
+  var dots = $('.slider-dots__circle');
+  // content = $('.slider-dots__content');
 
   dots.on('click', function () {
-    content.toggleClass('disable');
+    var id = $(this).attr('data-tab'),
+      content = $('.slider-dots__content[data-tab="' + id + '"]');
+
+    $('.slider-dots__content.slider-dots__content--active').removeClass('slider-dots__content--active');
+    $(this).addClass('slider-dots__content--active');
+
+    $('.slider-dots__content.slider-dots__content--active').removeClass('slider-dots__content--active');
+    content.addClass('slider-dots__content--active');
+
+    // console.log('click', $(this))
+
+    // content2 = $('.slider-dots__content');
+    // $(content2).mouseup(function (event) {
+    //   if ($(event.target).closest('.content2'.length)) {
+    //     console.log('errrr');
+    //   } else {
+
+    //     $(this).removeClass('slider-dots__content--active');
+    //     // modalReview.removeClass('review--visible');
+    //     console.log('yes')
+    //   }
+    // });
   })
 
 
