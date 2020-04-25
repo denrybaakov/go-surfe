@@ -311,5 +311,111 @@
 
 .slider-dots__content--active
   display: block 
+  &:after 
+    // display: block 
 
+@media screen and ( min-width: 1600px )
+  .surf-slide 
+    margin-left: 4rem !important  
+
+@media screen and ( max-width: 1600px )
+  .surf-slide
+    margin-left: 2rem !important 
+
+@media screen and ( max-width: 1400px )
+  .surf-slide
+    margin-left: -3.5rem !important 
+
+@media screen and ( max-width: 1200px )
+  .surf-slide
+    width: 28rem !important 
+    margin-left: -3.5rem !important 
+
+@media screen and ( max-width: 992px )
+  .surf 
+    padding-bottom: 10rem
+    &__swiper-container
+      display: none 
+  // .surf-slide
+  //   width: 40rem !important 
+  //   margin-left: -22% !important 
+  //   margin-right: 5rem !important
+  //   &__malibu  
+  //     margin-right: 12rem !important 
+  //     z-index: 1010
+  .slider-dots
+    &__circle
+      &--4 
+        top: 38%
+        right: 53%
+      &--8 
+        bottom: 21%;
+      &--6 
+        top: 68%;
+      &--7 
+        bottom: 14%
+
+@media screen and ( max-width: 768px )
+  .slider-dots__circle 
+    width: 17px 
+    height: 17px 
+    &--4 
+      top: 38%
+      right: 53%
+    &--8 
+      bottom: 28%;
+    &--6 
+      top: 65%;
+    &--7 
+      bottom: 24%
+  .surf
+    background: url(../img/surf/surf.svg) no-repeat left 200px / 50%,
+    url(../img/surf/poi.svg) no-repeat right 200px / 20%
+
+@media screen and ( max-width: 575px )
+  .surf
+    padding-bottom: 7rem
+    &__title
+      margin-right: 3.5rem 
+      display: block 
+      text-align: right
+    &__section-subtitle 
+      padding-right: 3.5rem
+    &__subtitle-right
+      font-size: 1.2rem
+    &__subtitle-text 
+      font-size: 2.5rem
+    &__slider-map 
+      position: relative 
+
+  .slider-dots__content 
+    &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 
+      top: auto 
+      right: auto
+      bottom: -8% !important 
+      left: 50% !important
+      margin-left: -10rem
+
+  .slider-dots__circle 
+    &--1 
+      bottom: 33%
+    &--2 
+      top: 50%
+    &--3
+      top: 51%
+    &--4 
+      top: 38%
+      right: 53%
+    &--5 
+      top: 46%
+    &--8 
+      bottom: 35%;
+    &--6 
+      top: 60%;
+    &--7 
+      bottom: 31%
   
+    
+      
+
+      

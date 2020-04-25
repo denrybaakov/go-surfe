@@ -1450,3 +1450,90 @@ a {
 
 .slider-dots__content--active {
   display: block; }
+
+@media screen and (min-width: 1600px) {
+  .surf-slide {
+    margin-left: 4rem !important; } }
+
+@media screen and (max-width: 1600px) {
+  .surf-slide {
+    margin-left: 2rem !important; } }
+
+@media screen and (max-width: 1400px) {
+  .surf-slide {
+    margin-left: -3.5rem !important; } }
+
+@media screen and (max-width: 1200px) {
+  .surf-slide {
+    width: 28rem !important;
+    margin-left: -3.5rem !important; } }
+
+@media screen and (max-width: 992px) {
+  .surf {
+    padding-bottom: 10rem; }
+    .surf__swiper-container {
+      display: none; }
+  .slider-dots__circle--4 {
+    top: 38%;
+    right: 53%; }
+  .slider-dots__circle--8 {
+    bottom: 21%; }
+  .slider-dots__circle--6 {
+    top: 68%; }
+  .slider-dots__circle--7 {
+    bottom: 14%; } }
+
+@media screen and (max-width: 768px) {
+  .slider-dots__circle {
+    width: 17px;
+    height: 17px; }
+    .slider-dots__circle--4 {
+      top: 38%;
+      right: 53%; }
+    .slider-dots__circle--8 {
+      bottom: 28%; }
+    .slider-dots__circle--6 {
+      top: 65%; }
+    .slider-dots__circle--7 {
+      bottom: 24%; }
+  .surf {
+    background: url(../img/surf/surf.svg) no-repeat left 200px/50%, url(../img/surf/poi.svg) no-repeat right 200px/20%; } }
+
+@media screen and (max-width: 575px) {
+  .surf {
+    padding-bottom: 7rem; }
+    .surf__title {
+      margin-right: 3.5rem;
+      display: block;
+      text-align: right; }
+    .surf__section-subtitle {
+      padding-right: 3.5rem; }
+    .surf__subtitle-right {
+      font-size: 1.2rem; }
+    .surf__subtitle-text {
+      font-size: 2.5rem; }
+    .surf__slider-map {
+      position: relative; }
+  .slider-dots__content--1, .slider-dots__content--2, .slider-dots__content--3, .slider-dots__content--4, .slider-dots__content--5, .slider-dots__content--6, .slider-dots__content--7, .slider-dots__content--8 {
+    top: auto;
+    right: auto;
+    bottom: -8% !important;
+    left: 50% !important;
+    margin-left: -10rem; }
+  .slider-dots__circle--1 {
+    bottom: 33%; }
+  .slider-dots__circle--2 {
+    top: 50%; }
+  .slider-dots__circle--3 {
+    top: 51%; }
+  .slider-dots__circle--4 {
+    top: 38%;
+    right: 53%; }
+  .slider-dots__circle--5 {
+    top: 46%; }
+  .slider-dots__circle--8 {
+    bottom: 35%; }
+  .slider-dots__circle--6 {
+    top: 60%; }
+  .slider-dots__circle--7 {
+    bottom: 31%; } }

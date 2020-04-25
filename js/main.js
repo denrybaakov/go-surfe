@@ -42,6 +42,9 @@ $(document).ready(function () {
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
+    // centeredSlides: true,
+    // slidesOffsetBefore: 0,
+    // slidesOffsetAfter: 800,
     loopFillGroupWithBlank: false,
     slideToClickedSlide: true,
     // pagination: {
@@ -72,7 +75,9 @@ $(document).ready(function () {
     $(this).addClass('slider-dots__content--active');
 
     $('.slider-dots__content.slider-dots__content--active').removeClass('slider-dots__content--active');
-    content.addClass('slider-dots__content--active');
+    content.toggleClass('slider-dots__content--active');
+
+    // 
 
     // console.log('click', $(this))
 
