@@ -93,6 +93,8 @@
     display: flex
     z-index: 9
   &__btn-prev
+    &:focus 
+      outline: none
     margin-right: 2rem
     img 
       opacity: 0.5
@@ -100,6 +102,9 @@
       &:hover 
         opacity: 1
   &__btn-next 
+    &:focus 
+      outline: none 
+
     img 
       opacity: 0.5
       cursor: pointer 
@@ -107,3 +112,85 @@
         opacity: 1
 
     
+@media screen and ( max-width: 1400px )
+  .travel 
+    &__info-row 
+      flex-wrap: nowrap
+    &__info-item 
+      margin-right: 1rem
+
+@media screen and ( max-width: 1200px )
+  .travel 
+    &__info-description 
+      left: -89px 
+      top: 86px 
+    &__info-item 
+      flex-basis: 20%
+    &__info-subtitle-text
+      margin-bottom: 7.71rem
+    &__slide 
+      background: url('../img/travel/air.png') no-repeat top 500px right / 520px
+
+@media screen and ( max-width: 992px )
+  .travel 
+    &__info-subtitle-text
+      margin-bottom: 13.71rem
+    &__info-row 
+      flex-wrap: wrap 
+      justify-content: space-evenly
+    &__info-item 
+      flex-basis: 47%
+      width: 100%
+      margin-bottom: 13rem;
+    &__slide 
+      background: url('../img/travel/air.png') no-repeat top 50% right / 520px
+
+@media screen and ( max-width: 768px )
+  .travel 
+    &__section-subtitle 
+      top: 0
+      margin-top: 0
+    &__info-subtitle-text
+      margin-bottom: 5.71rem
+    &__slide 
+      background: none
+    &__btn-group 
+      top: 117px 
+      right: 67px 
+    &__info-row 
+      
+    &__info-item 
+      min-width: auto
+      width: auto 
+      margin-right: 0.5rem
+    &__info-text 
+      font-size: 2.35rem
+
+@media screen and ( max-width: 575px )
+  .travel 
+    background: url('../img/travel/cocktail.png') no-repeat bottom 600px right / 50%, url('../img/travel/travel.png') no-repeat top 50px left / 100%
+    &__info 
+      margin-top: 0
+      margin-left: 5rem
+    &__info-row 
+      flex-direction: column 
+    &__info-subtitle-text
+      font-size: 2.4rem
+    &__slide
+      img 
+        margin-top: 6rem
+    &__subtitle-text
+      font-size: 2.4rem
+  .section-title 
+    font-size: 5rem
+
+@media screen and ( max-width: 450px )
+  .travel 
+    &__btn 
+      padding-right: 0
+      margin-left: -5rem
+    &__info-subtitle-text
+      &:after 
+        margin-left: 0.85rem 
+        width: 80px
+        background-size: contain

@@ -1099,7 +1099,7 @@ a {
     height: 18rem;
     width: 7rem;
     background-color: #4AF6CD;
-    z-index: 99; }
+    z-index: 999999999; }
   .aside__logo-text {
     position: absolute;
     bottom: 15px;
@@ -1640,13 +1640,91 @@ a {
     z-index: 9; }
   .travel__btn-prev {
     margin-right: 2rem; }
+    .travel__btn-prev:focus {
+      outline: none; }
     .travel__btn-prev img {
       opacity: 0.5;
       cursor: pointer; }
       .travel__btn-prev img:hover {
         opacity: 1; }
+  .travel__btn-next:focus {
+    outline: none; }
   .travel__btn-next img {
     opacity: 0.5;
     cursor: pointer; }
     .travel__btn-next img:hover {
       opacity: 1; }
+
+@media screen and (max-width: 1400px) {
+  .travel__info-row {
+    flex-wrap: nowrap; }
+  .travel__info-item {
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 1200px) {
+  .travel__info-description {
+    left: -89px;
+    top: 86px; }
+  .travel__info-item {
+    flex-basis: 20%; }
+  .travel__info-subtitle-text {
+    margin-bottom: 7.71rem; }
+  .travel__slide {
+    background: url("../img/travel/air.png") no-repeat top 500px right/520px; } }
+
+@media screen and (max-width: 992px) {
+  .travel__info-subtitle-text {
+    margin-bottom: 13.71rem; }
+  .travel__info-row {
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .travel__info-item {
+    flex-basis: 47%;
+    width: 100%;
+    margin-bottom: 13rem; }
+  .travel__slide {
+    background: url("../img/travel/air.png") no-repeat top 50% right/520px; } }
+
+@media screen and (max-width: 768px) {
+  .travel__section-subtitle {
+    top: 0;
+    margin-top: 0; }
+  .travel__info-subtitle-text {
+    margin-bottom: 5.71rem; }
+  .travel__slide {
+    background: none; }
+  .travel__btn-group {
+    top: 117px;
+    right: 67px; }
+  .travel__info-item {
+    min-width: auto;
+    width: auto;
+    margin-right: 0.5rem; }
+  .travel__info-text {
+    font-size: 2.35rem; } }
+
+@media screen and (max-width: 575px) {
+  .travel {
+    background: url("../img/travel/cocktail.png") no-repeat bottom 600px right/50%, url("../img/travel/travel.png") no-repeat top 50px left/100%; }
+    .travel__info {
+      margin-top: 0;
+      margin-left: 5rem; }
+    .travel__info-row {
+      flex-direction: column; }
+    .travel__info-subtitle-text {
+      font-size: 2.4rem; }
+    .travel__slide img {
+      margin-top: 6rem; }
+    .travel__subtitle-text {
+      font-size: 2.4rem; }
+  .section-title {
+    font-size: 5rem; } }
+
+@media screen and (max-width: 450px) {
+  .travel__btn {
+    padding-right: 0;
+    margin-left: -5rem; }
+  .travel__info-subtitle-text:after {
+    margin-left: 0.85rem;
+    width: 80px;
+    background-size: contain; } }
