@@ -1,0 +1,82 @@
+.travel 
+  padding-bottom: 13rem
+  background: url('../img/travel/cocktail.png') no-repeat bottom -50px right
+  &__title 
+    margin-bottom: 8rem
+  &__swiper-container 
+    
+
+  &__slide
+    position: relative 
+    width: 100%
+    background: url('../img/travel/air.png') no-repeat top 550px right / 520px
+  &__image 
+  &__section-subtitle 
+    position: absolute
+    top: 12px
+    right: 0
+    margin-top: 5rem
+  &__info 
+    margin-top: -8rem
+    margin-left: 9.7rem
+  &__info-subtitle-text
+    margin-bottom: 5.5rem
+    text-align: left
+    display: flex 
+    align-items: center 
+    &:after 
+      content: ''
+      display: inline-block
+      margin-left: 1.85rem
+      width: 52px 
+      height: 46px 
+      background: url('../img/travel/virgin11.svg') no-repeat center / cover
+      transition: all 1s
+    &:hover:after 
+      width: 52px 
+      height: 46px 
+      background: url('../img/travel/virgin22.svg')
+  &__info-row 
+    display: flex 
+    padding-right: 8.714rem
+    justify-content: space-between
+    align-items: flex-start 
+    flex-wrap: wrap 
+  &__info-item 
+    padding-left: 1.5rem
+    position: relative
+    flex-basis: 25%
+    min-height: 24%
+    margin-bottom: 10rem
+    // margin-left: 2rem
+    // display: flex 
+    // min-height: 15rem
+  &__info-description 
+    +light 
+    text-transform: uppercase
+    line-height: 22px 
+    font-size: 1.285rem
+    letter-spacing: 8px
+    color: rgba($light, 0.5)
+    text-align: right
+    position: absolute
+    left: -110px
+    top: 97px 
+    width: 14.28rem
+    height: 0
+    white-space: nowrap
+    display: inline-block
+    transform: rotate(-90deg)
+    // transform-origin: left  top 0
+  &__info-text 
+    +bold 
+    text-align: left
+    text-transform: uppercase
+    line-height: 36px
+    font-size: 2.85rem
+    max-width: 17.28rem
+  &__btn 
+    margin-top: 5rem
+    padding-right: 8.714rem
+    display: flex 
+    justify-content: center 

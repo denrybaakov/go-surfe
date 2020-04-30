@@ -1537,3 +1537,80 @@ a {
     top: 60%; }
   .slider-dots__circle--7 {
     bottom: 31%; } }
+
+.travel {
+  padding-bottom: 13rem;
+  background: url("../img/travel/cocktail.png") no-repeat bottom -50px right; }
+  .travel__title {
+    margin-bottom: 8rem; }
+  .travel__slide {
+    position: relative;
+    width: 100%;
+    background: url("../img/travel/air.png") no-repeat top 550px right/520px; }
+  .travel__section-subtitle {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin-top: 5rem; }
+  .travel__info {
+    margin-top: -8rem;
+    margin-left: 9.7rem; }
+  .travel__info-subtitle-text {
+    margin-bottom: 5.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center; }
+    .travel__info-subtitle-text:after {
+      content: '';
+      display: inline-block;
+      margin-left: 1.85rem;
+      width: 52px;
+      height: 46px;
+      background: url("../img/travel/virgin11.svg") no-repeat center/cover;
+      transition: all 1s; }
+    .travel__info-subtitle-text:hover:after {
+      width: 52px;
+      height: 46px;
+      background: url("../img/travel/virgin22.svg"); }
+  .travel__info-row {
+    display: flex;
+    padding-right: 8.714rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .travel__info-item {
+    padding-left: 1.5rem;
+    position: relative;
+    flex-basis: 25%;
+    min-height: 24%;
+    margin-bottom: 10rem; }
+  .travel__info-description {
+    font-family: 'Fira Sans Light', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-size: 1.285rem;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+    position: absolute;
+    left: -110px;
+    top: 97px;
+    width: 14.28rem;
+    height: 0;
+    white-space: nowrap;
+    display: inline-block;
+    transform: rotate(-90deg); }
+  .travel__info-text {
+    font-family: 'Fira Sans Bold', sans-serif;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 36px;
+    font-size: 2.85rem;
+    max-width: 17.28rem; }
+  .travel__btn {
+    margin-top: 5rem;
+    padding-right: 8.714rem;
+    display: flex;
+    justify-content: center; }

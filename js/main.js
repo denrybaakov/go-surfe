@@ -92,7 +92,22 @@ $(document).ready(function () {
     //     console.log('yes')
     //   }
     // });
-  })
+  });
+
+
+
+
+  var swiperTravel = new Swiper('.travel__swiper-container', {
+    effect: 'slide',
+    // direction: 'vertical',
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.travel__btn-next',
+      prevEl: '.travel__btn-prev',
+    },
+
+  });
 
 
 
