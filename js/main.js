@@ -99,6 +99,10 @@ $(document).ready(function () {
 
   var swiperTravel = new Swiper('.travel__swiper-container', {
     effect: 'slide',
+    centeredSlides: true,
+    shortSwipes: false,
+    longSwipes: false,
+    followFinger: false,
     // direction: 'vertical',
     loop: true,
     // Navigation arrows

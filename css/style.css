@@ -596,6 +596,21 @@ template {
       height: 1px;
       background-color: #fff; }
 
+.info-description {
+  font-family: 'Fira Sans Light', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-size: 1.285rem;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  width: 14.28rem;
+  height: 0;
+  white-space: nowrap;
+  display: inline-block;
+  transform: rotate(-90deg); }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -1540,8 +1555,9 @@ a {
 
 .travel {
   padding-bottom: 13rem;
-  background: url("../img/travel/cocktail.png") no-repeat bottom -50px right; }
+  background: url("../img/travel/cocktail.png") no-repeat bottom -50px right, url("../img/travel/travel.png") no-repeat top 50px left; }
   .travel__title {
+    margin: 0.5rem 0 0 17%;
     margin-bottom: 8rem; }
   .travel__slide {
     position: relative;
@@ -1556,7 +1572,7 @@ a {
     margin-top: -8rem;
     margin-left: 9.7rem; }
   .travel__info-subtitle-text {
-    margin-bottom: 5.5rem;
+    margin-bottom: 8.71rem;
     text-align: left;
     display: flex;
     align-items: center; }
@@ -1585,22 +1601,9 @@ a {
     min-height: 24%;
     margin-bottom: 10rem; }
   .travel__info-description {
-    font-family: 'Fira Sans Light', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 22px;
-    font-size: 1.285rem;
-    letter-spacing: 8px;
-    color: rgba(255, 255, 255, 0.5);
-    text-align: right;
     position: absolute;
     left: -110px;
-    top: 97px;
-    width: 14.28rem;
-    height: 0;
-    white-space: nowrap;
-    display: inline-block;
-    transform: rotate(-90deg); }
+    top: 97px; }
   .travel__info-text {
     font-family: 'Fira Sans Bold', sans-serif;
     font-weight: 800;
@@ -1609,8 +1612,41 @@ a {
     line-height: 36px;
     font-size: 2.85rem;
     max-width: 17.28rem; }
+    .travel__info-text--last {
+      position: relative;
+      margin-right: 0; }
+      .travel__info-text--last:after {
+        content: 'Round Trip';
+        position: absolute;
+        bottom: -21px;
+        right: 0;
+        font-family: 'Fira Sans Light', sans-serif;
+        font-weight: 300;
+        display: inline-block;
+        font-size: 1rem;
+        letter-spacing: 5.25px;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: right; }
   .travel__btn {
     margin-top: 5rem;
     padding-right: 8.714rem;
     display: flex;
     justify-content: center; }
+  .travel__btn-group {
+    position: absolute;
+    top: 222px;
+    right: 77px;
+    display: flex;
+    z-index: 9; }
+  .travel__btn-prev {
+    margin-right: 2rem; }
+    .travel__btn-prev img {
+      opacity: 0.5;
+      cursor: pointer; }
+      .travel__btn-prev img:hover {
+        opacity: 1; }
+  .travel__btn-next img {
+    opacity: 0.5;
+    cursor: pointer; }
+    .travel__btn-next img:hover {
+      opacity: 1; }
