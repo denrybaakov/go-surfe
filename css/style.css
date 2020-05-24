@@ -1748,10 +1748,13 @@ a {
     margin-top: -8rem;
     margin-left: 9.7rem; }
   .sleep__info-subtitle-text {
-    margin-bottom: 8.71rem;
     text-align: left;
+    margin: 0; }
+  .sleep__flex-block-text {
+    margin-top: 0.871rem;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 8.71rem; }
   .sleep__info-row {
     display: flex;
     padding-right: 8.714rem;
@@ -1873,6 +1876,64 @@ a {
     .sleep__btn-next img:hover {
       opacity: 1; }
 
+.sleep__rating {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-image: url("../img/sleep/star.png");
+  background-repeat: repeat-x;
+  background-size: 40px 40px; }
+  .sleep__rating-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0); }
+  .sleep__rating-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    background-size: 40px;
+    background-repeat: repeat-x;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .sleep__rating-star:focus {
+      outline: none; }
+
+.sleep__rating-input:checked + .sleep__rating-star,
+.sleep__rating-star:hover {
+  background-image: url("../img/sleep/star2.svg"); }
+
+.sleep__rating-star:hover ~ .sleep__rating-star {
+  background-image: url(../img/sleep/star.svg); }
+
+.sleep__rating-star:nth-of-type(1) {
+  z-index: 5;
+  width: 40px; }
+
+.sleep__rating-star:nth-of-type(2) {
+  z-index: 4;
+  width: 80px; }
+
+.sleep__rating-star:nth-of-type(3) {
+  z-index: 3;
+  width: 120px; }
+
+.sleep__rating-star:nth-of-type(4) {
+  z-index: 2;
+  width: 160px; }
+
+.sleep__rating-star:nth-of-type(5) {
+  z-index: 1;
+  width: 200px; }
+
 @media screen and (max-width: 1400px) {
   .sleep__info-row {
     flex-wrap: nowrap; }
@@ -1888,7 +1949,9 @@ a {
   .sleep__info-subtitle-text {
     margin-bottom: 7.71rem; }
   .sleep__slide {
-    background: url("../img/sleep/flower2.png") no-repeat top 500px right/520px; } }
+    background: url("../img/sleep/flower2.png") no-repeat top 500px right/520px; }
+  .sleep__flex-block-text {
+    align-items: flex-start; } }
 
 @media screen and (max-width: 992px) {
   .sleep__info-subtitle-text {
@@ -1939,11 +2002,17 @@ a {
     .sleep__info-row {
       flex-direction: column; }
     .sleep__info-subtitle-text {
-      font-size: 2.4rem; }
+      font-size: 2.4rem;
+      margin-bottom: 0; }
     .sleep__slide img {
       margin-top: 6rem; }
     .sleep__subtitle-text {
       font-size: 2.4rem; }
+    .sleep__flex-block-text {
+      flex-direction: column;
+      align-items: flex-start; }
+    .sleep__rating {
+      margin-left: -0.8rem; }
   .section-title {
     font-size: 5rem; } }
 
