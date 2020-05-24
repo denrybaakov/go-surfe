@@ -1,0 +1,254 @@
+.sleep 
+  padding-bottom: 13rem
+  background: url('../img/sleep/oneFlower.png') no-repeat bottom 50px right,
+  url('../img/sleep/sleep.svg') no-repeat top 50px left  
+  &__title 
+    margin: 0.5rem 0 0 17%;
+    margin-bottom: 8rem
+  &__swiper-container 
+    
+
+  &__slide
+    position: relative 
+    width: 100%
+    background: url('../img/sleep/flower2.png') no-repeat top 550px right / 520px
+  &__image 
+  &__section-subtitle 
+    position: absolute
+    top: 12px
+    right: 0
+    margin-top: 5rem
+  &__info 
+    margin-top: -8rem
+    margin-left: 9.7rem
+  &__info-subtitle-text
+    margin-bottom: 8.71rem
+    text-align: left
+    display: flex 
+    align-items: center 
+
+  &__info-row 
+    display: flex 
+    padding-right: 8.714rem
+    justify-content: space-between
+    align-items: flex-start 
+    flex-wrap: wrap 
+  &__info-item 
+    padding-left: 1.5rem
+    position: relative
+    flex-basis: 25%
+    min-height: 24%
+    margin-bottom: 10rem
+    // margin-left: 2rem
+    // display: flex 
+    // min-height: 15rem
+  &__info-description 
+    position: absolute
+    left: -110px
+    top: 97px 
+    
+    // transform-origin: left  top 0
+  &__info-text 
+    +bold 
+    text-align: left
+    text-transform: uppercase
+    line-height: 36px
+    font-size: 2.85rem
+    max-width: 17.28rem
+    &--last 
+      position: relative 
+      margin-right: 0
+      &:after 
+        content: 'Per Night'
+        position: absolute 
+        bottom: -21px 
+        right: 0
+        +light
+        display: inline-block 
+        font-size: 1rem 
+        letter-spacing: 5.25px
+        color: rgba($light, 0.5)
+        text-align: right
+  &__info-text-night,
+  &__info-text-guest
+    position: relative 
+  &__night-btn-minus
+    position: absolute 
+    right: 80px
+    bottom: -25px
+    background: transparent
+    border: 1px solid transparent 
+    color: $primary
+    font-size: 1.6rem
+    cursor: pointer
+    transition: 0.3s ease-in-out
+    &:hover 
+      border: 1px solid $primary 
+      border-radius: 8px
+  &__night-btn-plus
+    position: absolute 
+    right: 50px
+    bottom: -25px
+    background: transparent
+    border: 1px solid transparent 
+    color: $primary
+    font-size: 1.6rem
+    cursor: pointer
+    transition: 0.3s ease-in-out
+    &:hover 
+      border: 1px solid $primary 
+      border-radius: 8px
+  &__guest-btn-minus
+    position: absolute 
+    right: 80px
+    bottom: -25px
+    background: transparent
+    border: 1px solid transparent 
+    color: $primary
+    font-size: 1.6rem
+    cursor: pointer
+    transition: 0.3s ease-in-out
+    &:hover 
+      border: 1px solid $primary 
+      border-radius: 8px
+  &__guest-btn-plus
+    position: absolute 
+    right: 50px
+    bottom: -25px
+    background: transparent
+    border: 1px solid transparent 
+    color: $primary
+    font-size: 1.6rem
+    cursor: pointer
+    transition: 0.3s ease-in-out
+    &:hover 
+      border: 1px solid $primary 
+      border-radius: 8px
+  &__btn 
+    margin-top: 5rem
+    padding-right: 8.714rem
+    display: flex 
+    justify-content: center 
+
+  &__btn-group 
+    position: absolute 
+    top: 222px
+    right: 77px 
+    display: flex
+    z-index: 9
+  &__btn-prev
+    &:focus 
+      outline: none
+    margin-right: 2rem
+    img 
+      opacity: 0.5
+      cursor: pointer
+      &:hover 
+        opacity: 1
+  &__btn-next 
+    &:focus 
+      outline: none 
+
+    img 
+      opacity: 0.5
+      cursor: pointer 
+      &:hover 
+        opacity: 1
+
+    
+@media screen and ( max-width: 1400px )
+  .sleep 
+    &__info-row 
+      flex-wrap: nowrap
+    &__info-item 
+      margin-right: 1rem
+
+@media screen and ( max-width: 1200px )
+  .sleep
+    &__info-description 
+      left: -89px 
+      top: 86px 
+    &__info-item 
+      flex-basis: 20%
+    &__info-subtitle-text
+      margin-bottom: 7.71rem
+    &__slide 
+      background: url('../img/sleep/flower2.png') no-repeat top 500px right / 520px
+
+@media screen and ( max-width: 992px )
+  .sleep
+    &__info-subtitle-text
+      margin-bottom: 13.71rem
+    &__info-row 
+      flex-wrap: wrap 
+      justify-content: space-evenly
+    &__info-item 
+      flex-basis: 47%
+      width: 100%
+      margin-bottom: 13rem;
+    &__slide 
+      background: url('../img/sleep/flower2.png') no-repeat top 50% right / 520px
+    &__night-btn-plus,
+    &__guest-btn-plus
+      position: absolute 
+      left: 140px
+    &__night-btn-minus,
+    &__guest-btn-minus
+      left: 110px
+
+@media screen and ( max-width: 768px )
+  .sleep
+    &__section-subtitle 
+      top: 0
+      margin-top: 0
+    &__info-subtitle-text
+      margin-bottom: 5.71rem
+    &__slide 
+      background: none
+    &__btn-group 
+      top: 117px 
+      right: 67px 
+    &__info-row 
+      
+    &__info-item 
+      min-width: auto
+      width: auto 
+      margin-right: 0.5rem
+    &__info-text 
+      font-size: 2.35rem
+
+    &__night-btn-plus,
+    &__guest-btn-plus
+      left: 120px
+    &__night-btn-minus,
+    &__guest-btn-minus
+      left: 90px
+
+@media screen and ( max-width: 575px )
+  .sleep
+    background: url('../img/sleep/oneFlower.png') no-repeat bottom 600px right / 30%, url('../img/sleep/sleep.svg') no-repeat top 50px left / 100%
+    &__info 
+      margin-top: 0
+      margin-left: 5rem
+    &__info-row 
+      flex-direction: column 
+    &__info-subtitle-text
+      font-size: 2.4rem
+    &__slide
+      img 
+        margin-top: 6rem
+    &__subtitle-text
+      font-size: 2.4rem
+  .section-title 
+    font-size: 5rem
+
+@media screen and ( max-width: 450px )
+  .sleep
+    &__btn 
+      padding-right: 0
+      margin-left: -5rem
+    &__info-subtitle-text
+      &:after 
+        margin-left: 0.85rem 
+        width: 80px
+        background-size: contain

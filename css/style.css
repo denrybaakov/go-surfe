@@ -1728,3 +1728,230 @@ a {
     margin-left: 0.85rem;
     width: 80px;
     background-size: contain; } }
+
+.sleep {
+  padding-bottom: 13rem;
+  background: url("../img/sleep/oneFlower.png") no-repeat bottom 50px right, url("../img/sleep/sleep.svg") no-repeat top 50px left; }
+  .sleep__title {
+    margin: 0.5rem 0 0 17%;
+    margin-bottom: 8rem; }
+  .sleep__slide {
+    position: relative;
+    width: 100%;
+    background: url("../img/sleep/flower2.png") no-repeat top 550px right/520px; }
+  .sleep__section-subtitle {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin-top: 5rem; }
+  .sleep__info {
+    margin-top: -8rem;
+    margin-left: 9.7rem; }
+  .sleep__info-subtitle-text {
+    margin-bottom: 8.71rem;
+    text-align: left;
+    display: flex;
+    align-items: center; }
+  .sleep__info-row {
+    display: flex;
+    padding-right: 8.714rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .sleep__info-item {
+    padding-left: 1.5rem;
+    position: relative;
+    flex-basis: 25%;
+    min-height: 24%;
+    margin-bottom: 10rem; }
+  .sleep__info-description {
+    position: absolute;
+    left: -110px;
+    top: 97px; }
+  .sleep__info-text {
+    font-family: 'Fira Sans Bold', sans-serif;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 36px;
+    font-size: 2.85rem;
+    max-width: 17.28rem; }
+    .sleep__info-text--last {
+      position: relative;
+      margin-right: 0; }
+      .sleep__info-text--last:after {
+        content: 'Per Night';
+        position: absolute;
+        bottom: -21px;
+        right: 0;
+        font-family: 'Fira Sans Light', sans-serif;
+        font-weight: 300;
+        display: inline-block;
+        font-size: 1rem;
+        letter-spacing: 5.25px;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: right; }
+  .sleep__info-text-night, .sleep__info-text-guest {
+    position: relative; }
+  .sleep__night-btn-minus {
+    position: absolute;
+    right: 80px;
+    bottom: -25px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #4AF6CD;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
+    .sleep__night-btn-minus:hover {
+      border: 1px solid #4AF6CD;
+      border-radius: 8px; }
+  .sleep__night-btn-plus {
+    position: absolute;
+    right: 50px;
+    bottom: -25px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #4AF6CD;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
+    .sleep__night-btn-plus:hover {
+      border: 1px solid #4AF6CD;
+      border-radius: 8px; }
+  .sleep__guest-btn-minus {
+    position: absolute;
+    right: 80px;
+    bottom: -25px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #4AF6CD;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
+    .sleep__guest-btn-minus:hover {
+      border: 1px solid #4AF6CD;
+      border-radius: 8px; }
+  .sleep__guest-btn-plus {
+    position: absolute;
+    right: 50px;
+    bottom: -25px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #4AF6CD;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
+    .sleep__guest-btn-plus:hover {
+      border: 1px solid #4AF6CD;
+      border-radius: 8px; }
+  .sleep__btn {
+    margin-top: 5rem;
+    padding-right: 8.714rem;
+    display: flex;
+    justify-content: center; }
+  .sleep__btn-group {
+    position: absolute;
+    top: 222px;
+    right: 77px;
+    display: flex;
+    z-index: 9; }
+  .sleep__btn-prev {
+    margin-right: 2rem; }
+    .sleep__btn-prev:focus {
+      outline: none; }
+    .sleep__btn-prev img {
+      opacity: 0.5;
+      cursor: pointer; }
+      .sleep__btn-prev img:hover {
+        opacity: 1; }
+  .sleep__btn-next:focus {
+    outline: none; }
+  .sleep__btn-next img {
+    opacity: 0.5;
+    cursor: pointer; }
+    .sleep__btn-next img:hover {
+      opacity: 1; }
+
+@media screen and (max-width: 1400px) {
+  .sleep__info-row {
+    flex-wrap: nowrap; }
+  .sleep__info-item {
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 1200px) {
+  .sleep__info-description {
+    left: -89px;
+    top: 86px; }
+  .sleep__info-item {
+    flex-basis: 20%; }
+  .sleep__info-subtitle-text {
+    margin-bottom: 7.71rem; }
+  .sleep__slide {
+    background: url("../img/sleep/flower2.png") no-repeat top 500px right/520px; } }
+
+@media screen and (max-width: 992px) {
+  .sleep__info-subtitle-text {
+    margin-bottom: 13.71rem; }
+  .sleep__info-row {
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .sleep__info-item {
+    flex-basis: 47%;
+    width: 100%;
+    margin-bottom: 13rem; }
+  .sleep__slide {
+    background: url("../img/sleep/flower2.png") no-repeat top 50% right/520px; }
+  .sleep__night-btn-plus, .sleep__guest-btn-plus {
+    position: absolute;
+    left: 140px; }
+  .sleep__night-btn-minus, .sleep__guest-btn-minus {
+    left: 110px; } }
+
+@media screen and (max-width: 768px) {
+  .sleep__section-subtitle {
+    top: 0;
+    margin-top: 0; }
+  .sleep__info-subtitle-text {
+    margin-bottom: 5.71rem; }
+  .sleep__slide {
+    background: none; }
+  .sleep__btn-group {
+    top: 117px;
+    right: 67px; }
+  .sleep__info-item {
+    min-width: auto;
+    width: auto;
+    margin-right: 0.5rem; }
+  .sleep__info-text {
+    font-size: 2.35rem; }
+  .sleep__night-btn-plus, .sleep__guest-btn-plus {
+    left: 120px; }
+  .sleep__night-btn-minus, .sleep__guest-btn-minus {
+    left: 90px; } }
+
+@media screen and (max-width: 575px) {
+  .sleep {
+    background: url("../img/sleep/oneFlower.png") no-repeat bottom 600px right/30%, url("../img/sleep/sleep.svg") no-repeat top 50px left/100%; }
+    .sleep__info {
+      margin-top: 0;
+      margin-left: 5rem; }
+    .sleep__info-row {
+      flex-direction: column; }
+    .sleep__info-subtitle-text {
+      font-size: 2.4rem; }
+    .sleep__slide img {
+      margin-top: 6rem; }
+    .sleep__subtitle-text {
+      font-size: 2.4rem; }
+  .section-title {
+    font-size: 5rem; } }
+
+@media screen and (max-width: 450px) {
+  .sleep__btn {
+    padding-right: 0;
+    margin-left: -5rem; }
+  .sleep__info-subtitle-text:after {
+    margin-left: 0.85rem;
+    width: 80px;
+    background-size: contain; } }

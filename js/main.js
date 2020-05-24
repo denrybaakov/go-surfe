@@ -115,4 +115,20 @@ $(document).ready(function () {
 
 
 
+  var swiperSleep = new Swiper('.sleep__swiper-container', {
+    effect: 'slide',
+    centeredSlides: true,
+    shortSwipes: false,
+    longSwipes: false,
+    followFinger: false,
+    // direction: 'vertical',
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.sleep__btn-next',
+      prevEl: '.sleep__btn-prev',
+    },
+
+  });
+
 });
