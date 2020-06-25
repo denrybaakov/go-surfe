@@ -131,4 +131,63 @@ $(document).ready(function () {
 
   });
 
+
+
 });
+
+
+
+// js rating sleep 
+const textNight = document.querySelector('.sleep__info-text--js1');
+const textGuest = document.querySelector('.sleep__info-text-guest--js1');
+const textGuest2 = document.querySelector('.sleep__info-text-guest--js2');
+const sleepBtnMinus = document.querySelector('.sleep__night-btn-minus');
+const sleepBtnPlus = document.querySelector('.sleep__night-btn-plus');
+const guestBtnMinus = document.querySelector('.sleep__guest-btn-minus');
+const guestBtnPlus = document.querySelector('.sleep__guest-btn-plus');
+const totalPrice = document.querySelector('.js-total-1');
+const totalPrice2 = document.querySelector('.js-total-2');
+let nights = 5;
+let guests = 4;
+
+
+
+sleepBtnMinus.addEventListener('click', function () {
+  if (nights === 1) {
+    textNight.textContent = '1 nights';
+  } else {
+    textNight.textContent = `${nights -= 1} nights`;
+  }
+  totalPrice.textContent = `${Math.round((nights * 36.111 + guests * 42))}`;
+});
+
+sleepBtnPlus.addEventListener('click', function () {
+  if (nights === 20) {
+    textNight.textContent = '20 nights'
+  } else {
+    textNight.textContent = `${nights += 1} nights`;
+  }
+  totalPrice.textContent = `${Math.round((nights * 36.111 + guests * 42))}`;
+})
+
+guestBtnMinus.addEventListener('click', function () {
+  if (guests === 1) {
+    textGuest.textContent = `1 guests`
+  } else {
+    textGuest.textContent = `${--guests} guests`
+  }
+  totalPrice.textContent = `${Math.round((nights * 36.111 + guests * 42))}`;
+})
+
+guestBtnPlus.addEventListener('click', function () {
+  if (guests === 20) {
+    textGuest.textContent = `20 guests`
+  } else {
+    textGuest.textContent = `${++guests} guests`
+  }
+  totalPrice.textContent = `${Math.round((nights * 36.111 + guests * 42))}`;
+})
+
+
+
+
