@@ -1,0 +1,278 @@
+.shop 
+  position: relative
+  padding-bottom: 1rem
+  background: url('../img/shop/shop.png') no-repeat top 50px left  
+  &__title
+    margin: 0.5rem 0 0 17%;
+    margin-bottom: 5.6rem
+  &__swiper-slide
+    padding-bottom: 2rem
+  &__btn-group 
+    position: absolute
+    display: flex 
+    top: 0 
+    right: 77px
+    z-index: 99
+  &__btn-prev
+    margin-right: 2rem
+    img 
+      opacity: 0.5
+      cursor: pointer
+      &:hover 
+        opacity: 1
+  &__btn-next img 
+    opacity: 0.5 
+    cursor: pointer 
+    &:hover 
+      opacity: 1
+
+  &__info 
+    position: relative
+    display: flex 
+    // align-items: center 
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-left: 9.514rem
+    padding-right: 5.5rem
+    background: url('../img/shop/bg.png') no-repeat top right / contain
+
+  &__info-item
+    padding-top: 11rem
+    max-width: 33%
+    width: 100%
+    &:nth-child(2)
+      position: relative
+      max-width: 16.285rem
+      width: 100%
+      display: flex 
+      justify-content: center
+      padding-top: 0
+    &:last-child
+      display: flex 
+      justify-content: flex-end
+      flex-direction: column
+      height: 50rem
+      max-width: 23rem
+  &__flex-block-text 
+    display: flex
+    flex-direction: column
+  &__info-subtitle-text 
+    text-align: left
+    line-height: 40px
+    max-width: 34.357rem 
+    width: 100%
+    margin-bottom: 2.5rem
+  &__price 
+    font-size: 2.285rem 
+    +bold 
+    margin-bottom: 5.5rem
+    sup 
+      font-size: 1.285rem 
+  &__subtitle 
+    +bold 
+    font-size: 2rem
+    text-transform: uppercase
+  &__info-button 
+    width: fit-content
+    line-height: 36px
+    letter-spacing: 2px
+  &__btn 
+    display: flex 
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    margin-top: 20rem
+    a 
+      span 
+        &:before 
+          margin-left: -3rem
+  &__bottom-text
+    +light 
+    margin-top: 2rem
+    font-size: 0.857rem 
+    text-transform: uppercase 
+    letter-spacing: 1.05px 
+    color: rgba($light, 0.5)
+
+
+.button__block 
+  &:before 
+    left: 44%
+
+
+.extras 
+  display: flex
+  justify-content: space-between 
+  align-items: center
+  &__item 
+    display: flex 
+    flex-direction: column 
+    align-items: center 
+    justify-content: center
+    &:hover + .extras__title
+      color: red
+  &__img 
+    width: 100%
+    display: flex 
+    align-items: center 
+    justify-content: center 
+    height: 7.85rem
+    margin-bottom: 1rem
+  &__title 
+    display: block
+    +light
+    font-weight: 200
+    font-size: 1.285rem
+    line-height: 22px
+    letter-spacing: 8px
+    text-transform: uppercase
+    color: $gray
+    text-align: right
+  &__price 
+    font-size: 1.285re
+
+.sircles
+  position: absolute 
+  width: 100%
+  height: 100%
+  &__item 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    width: 20px
+    height: 20px
+    background-color: white 
+    border-radius: 50%
+    cursor: pointer 
+    transform: all 0.5s
+  &__item--one 
+    position: absolute 
+    top: 203px 
+    left: 173px
+  &__item--two 
+    position: absolute 
+    top: 296px 
+    left: -5px
+  &__item--three 
+    position: absolute 
+    bottom: 69px 
+    left: 54px
+
+.btn-sircle-minus
+  width: 10px
+  height: 2px 
+  background-color: $primary
+.btn-sircle-plus 
+  display: none
+  margin-left: -10px
+  width: 10px
+  height: 2px 
+  background-color: $primary
+  transform: rotate(90deg)
+
+.shop__content 
+  display: none
+  position: absolute
+  top: -13px
+  left: 130px
+  &-item
+    +bold 
+    width: 20rem
+    text-transform: uppercase
+    font-size: 1.714rem
+    line-height: 24px
+    height: 100%
+    &:before 
+      content: ''
+      position: absolute
+      margin-left: -104px
+      margin-top: 22px
+      display: block
+      width: 80px 
+      height: 1px 
+      background-color: rgba($light, 0.5)
+    &--one 
+      top: -10px 
+      left: 100px
+
+.active-circle 
+  .btn-sircle-plus 
+    display: block
+  .shop__content
+    display: block
+
+.swiper-slide
+  padding-bottom: 0
+  
+
+
+@media screen and (max-width: 990px) 
+  .shop__info
+    justify-content: space-around
+    flex-wrap: wrap 
+    padding-left: 7.4rem
+    &-item 
+      max-width: 50%
+      margin-bottom: 1rem
+      &:nth-child(1)
+        order: 2
+        max-width: 49%
+      &:nth-child(2)
+        order: 1
+
+        min-width: 28%
+        margin-right: 2rem
+      &:nth-child(3)
+        order: 3
+        height: auto 
+        padding-top: 5rem
+
+  .shop__content
+    &-item 
+      &:before 
+        margin-left: 87px
+        margin-top: 80px
+        width: 40px
+        transform: rotate(90deg)
+      &--one 
+        position: absolute
+        top: -120px;
+        left: -290px;
+        &:before
+          display: none
+      &--two 
+        position: absolute
+        top: 60px;
+        left: -160px;
+        &:before 
+          display: none
+          width: 40px
+      &--three 
+        position: absolute
+        top: 70px;
+        left: -160px;
+        &:before 
+          display: none 
+
+        
+@media screen and (max-width: 575px)
+  .shop__btn-group 
+    top: 0px
+    right: 5%
+  .shop__info 
+    padding-left: 7.4rem
+    padding-right: 0
+    &-item 
+      &:nth-child(1)
+        max-width: 100%
+      &:nth-child(3) 
+        max-width: 100%
+  .extras 
+    flex-direction: column
+    &__item 
+      margin-bottom: 3rem
+
+  .shop__btn
+    margin-top: 5rem 
+  
+

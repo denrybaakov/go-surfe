@@ -132,6 +132,23 @@ $(document).ready(function () {
   });
 
 
+  var swiperSleep = new Swiper('.shop__swiper-container', {
+    effect: 'slide',
+    centeredSlides: true,
+    shortSwipes: false,
+    longSwipes: false,
+    followFinger: false,
+    // direction: 'vertical',
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.shop__btn-next',
+      prevEl: '.shop__btn-prev',
+    },
+
+  });
+
+
 
 });
 
@@ -186,7 +203,19 @@ guestBtnPlus.addEventListener('click', function () {
     textGuest.textContent = `${++guests} guests`
   }
   totalPrice.textContent = `${Math.round((nights * 36.111 + guests * 42))}`;
-})
+});
+
+
+
+//--- SIRCLES 
+const sircles = document.querySelectorAll('.sircles__item');
+sircles.forEach(item => {
+
+  item.addEventListener('click', function () {
+    this.classList.toggle('active-circle');
+  });
+});
+// console.log(sircles[1]);
 
 
 
